@@ -33,8 +33,23 @@
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .projectInfo {
-    display: none;
-  }
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.navBtn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
 }

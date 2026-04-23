@@ -1,0 +1,34 @@
+.radarContainer {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.mapWrapper {
+  flex: 1;
+  z-index: 1;
+}
+
+.loading {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary);
+}
+
+.popup p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+}

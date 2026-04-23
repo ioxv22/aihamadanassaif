@@ -1,0 +1,52 @@
+.container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoutBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.toggle {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--primary);
+  cursor: pointer;
+  text-align: center;
+}
+
+.hint {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  text-align: center;
+  margin-top: 1rem;
+}

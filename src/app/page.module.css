@@ -3,6 +3,35 @@
   padding-top: 6rem;
 }
 
+.authHero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 8rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+  .authHero {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+}
+
 .hero {
   text-align: center;
   padding: 4rem 2rem;
