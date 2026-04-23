@@ -18,6 +18,72 @@
   gap: 1.5rem;
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cheapest {
+  border: 2px solid var(--primary);
+}
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background: var(--primary);
+  color: white;
+  padding: 5px 35px;
+  transform: rotate(45deg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.packageCard {
+  border: 2px solid var(--accent);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.packageBadge {
+  position: absolute;
+  top: -12px;
+  left: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.packageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.totalPrice {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.packageDetails {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.packageBreakdown {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
 .cardHeader {
   display: flex;
   justify-content: space-between;

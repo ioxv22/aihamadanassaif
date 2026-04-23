@@ -21,6 +21,15 @@
 .hero p {
   font-size: 1.25rem;
   opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.creators {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .contentWrapper {
