@@ -1,0 +1,96 @@
+{
+  "flights": [
+    {
+      "id": "f1",
+      "airline": "Emirates (Simulated)",
+      "origin": "Dubai (DXB)",
+      "destination": "London (LHR)",
+      "price": 2500,
+      "duration": "7h 30m",
+      "baggage": "30kg included",
+      "tags": ["Best Value", "Family-friendly"],
+      "features": {
+        "children": true,
+        "elderly": true,
+        "specialNeeds": true
+      },
+      "description": "Premium service with full amenities. Perfect for families needing extra space and care."
+    },
+    {
+      "id": "f2",
+      "airline": "FlyDubai (Simulated)",
+      "origin": "Dubai (DXB)",
+      "destination": "London (LHR)",
+      "price": 1800,
+      "duration": "8h 15m",
+      "baggage": "7kg hand carry only",
+      "tags": ["Cheapest"],
+      "features": {
+        "children": true,
+        "elderly": false,
+        "specialNeeds": false
+      },
+      "description": "Budget-friendly option. Best for light travelers looking for the lowest fare."
+    },
+    {
+      "id": "f3",
+      "airline": "Etihad (Simulated)",
+      "origin": "Abu Dhabi (AUH)",
+      "destination": "London (LHR)",
+      "price": 2300,
+      "duration": "7h 45m",
+      "baggage": "23kg included",
+      "tags": ["Comfort"],
+      "features": {
+        "children": true,
+        "elderly": true,
+        "specialNeeds": true
+      },
+      "description": "High comfort levels and great accessibility features for all ages."
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "name": "The Grand Oasis (Simulated)",
+      "pricePerNight": 450,
+      "rating": 4.8,
+      "distanceFromAirport": "12km",
+      "tags": ["Luxury", "Family-friendly"],
+      "description": "A premium stay with excellent family suites and child care services.",
+      "features": {
+        "wifi": true,
+        "pool": true,
+        "breakfast": true
+      }
+    },
+    {
+      "id": "h2",
+      "name": "Urban Budget Inn (Simulated)",
+      "pricePerNight": 120,
+      "rating": 3.5,
+      "distanceFromAirport": "5km",
+      "tags": ["Budget"],
+      "description": "Close to the airport and very affordable for students and solo travelers.",
+      "features": {
+        "wifi": true,
+        "pool": false,
+        "breakfast": false
+      }
+    },
+    {
+      "id": "h3",
+      "name": "City View Suites (Simulated)",
+      "pricePerNight": 280,
+      "rating": 4.2,
+      "distanceFromAirport": "8km",
+      "tags": ["Value", "Family-friendly"],
+      "description": "Great balance between price and comfort with spacious rooms.",
+      "features": {
+        "wifi": true,
+        "pool": true,
+        "breakfast": true
+      }
+    }
+  ]
+}

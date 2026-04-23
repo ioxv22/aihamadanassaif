@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.section {
+  padding: 2rem;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.point h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.point p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.table th {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.tipCard {
+  padding: 1.5rem;
+  background: var(--secondary);
+  border-radius: 12px;
+}
+
+.tipCard h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.tipCard p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
