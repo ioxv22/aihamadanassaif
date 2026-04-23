@@ -1,6 +1,15 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { 
+  onAuthStateChanged, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  signOut,
+  updateProfile,
+  User as FirebaseUser
+} from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 
 interface User {
   id: string;
@@ -15,44 +24,57 @@ interface AuthContextType {
   signup: (name: string, email: string, pass: string) => Promise<void>;
   logout: () => void;
   isAdmin: boolean;
+  loading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const saved = localStorage.getItem('travel_user');
-    if (saved) setUser(JSON.parse(saved));
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      if (firebaseUser) {
+        setUser({
+          id: firebaseUser.uid,
+          name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'User',
+          email: firebaseUser.email || '',
+          role: firebaseUser.email?.includes('admin') ? 'admin' : 'user'
+        });
+      } else {
+        setUser(null);
+      }
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const login = async (email: string, pass: string) => {
-    // Simulated DB check
-    const newUser: User = { 
-      id: '1', 
-      name: email.split('@')[0], 
-      email, 
-      role: email.includes('admin') ? 'admin' : 'user' 
-    };
-    setUser(newUser);
-    localStorage.setItem('travel_user', JSON.stringify(newUser));
+    await signInWithEmailAndPassword(auth, email, pass);
   };
 
   const signup = async (name: string, email: string, pass: string) => {
-    const newUser: User = { id: Date.now().toString(), name, email, role: 'user' };
-    setUser(newUser);
-    localStorage.setItem('travel_user', JSON.stringify(newUser));
+    const res = await createUserWithEmailAndPassword(auth, email, pass);
+    if (res.user) {
+      await updateProfile(res.user, { displayName: name });
+      setUser({
+        id: res.user.uid,
+        name: name,
+        email: email,
+        role: email.includes('admin') ? 'admin' : 'user'
+      });
+    }
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('travel_user');
+  const logout = async () => {
+    await signOut(auth);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout, isAdmin: user?.role === 'admin' }}>
-      {children}
+    <AuthContext.Provider value={{ user, login, signup, logout, isAdmin: user?.role === 'admin', loading }}>
+      {!loading && children}
     </AuthContext.Provider>
   );
 };

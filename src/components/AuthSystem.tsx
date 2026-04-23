@@ -9,14 +9,20 @@ export default function AuthSystem() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [error, setError] = useState('');
   const { user, login, signup, logout } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isLogin) {
-      await login(email, password);
-    } else {
-      await signup(name, email, password);
+    setError('');
+    try {
+      if (isLogin) {
+        await login(email, password);
+      } else {
+        await signup(name, email, password);
+      }
+    } catch (err: any) {
+      setError(err.message || 'Authentication failed');
     }
   };
 
@@ -32,6 +38,7 @@ export default function AuthSystem() {
   return (
     <div className={`${styles.container} glass`}>
       <h3>{isLogin ? 'Login' : 'Sign Up'}</h3>
+      {error && <div className={styles.error}>{error}</div>}
       <form onSubmit={handleSubmit} className={styles.form}>
         {!isLogin && (
           <input 
