@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Travel AI Assistant ✈️
 
-## Getting Started
+A modern, responsive AI-powered travel assistant website designed for Grade 11 students.
 
-First, run the development server:
+## Project Identity
+- **Project Name:** Smart Travel AI Assistant
+- **Created by:** Hamad, Saif, Anas
+- **Target Users:** Students, families, and beginner travelers
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **AI Chat Assistant:** Powered by Kilwa AI to help plan trips conversationaly.
+- **Flight Comparison:** Simulated flight options with price, duration, and baggage info.
+- **Hotel Recommendations:** Curated hotel cards with ratings and distance details.
+- **Family-Friendly:** Special focus on accessibility for children, elderly, and special needs.
+- **Ethics & Research:** Educational sections comparing AI vs traditional systems and explaining AI transparency.
+- **Dark/Light Mode:** Premium glassmorphic UI with seamless theme switching.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
+- **Framework:** Next.js (React)
+- **Styling:** Vanilla CSS (CSS Modules)
+- **AI Integration:** Kilwa Chat API
+- **Data:** Simulated JSON dataset
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ioxv22/aihamadanassaif.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev --webpack
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Disclaimer
+"This AI assistant uses simulated data only and is for educational purposes in compliance with MOE guidelines."
