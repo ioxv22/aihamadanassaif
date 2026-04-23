@@ -56,7 +56,7 @@ export default function AdminDashboard() {
           <tbody>
             <tr>
               <td>F001</td>
-              <td>DXB -> LHR</td>
+              <td>DXB &rarr; LHR</td>
               <td>Flight</td>
               <td><span className={styles.active}>Active</span></td>
               <td><button className={styles.editBtn}>Edit</button></td>
